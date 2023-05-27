@@ -1,0 +1,13 @@
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\AmarisMVC.LLB.dll
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\AmarisMVC.LLB.pdb
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\AmarisMVC.LDA.dll
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\AmarisMVC.LLM.dll
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\AmarisMVC.LDA.pdb
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\AmarisMVC.LLM.pdb
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\bin\Debug\Newtonsoft.Json.xml
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\obj\Debug\AmarisMVC.LLB.csproj.AssemblyReference.cache
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\obj\Debug\AmarisMVC.LLB.csproj.CoreCompileInputs.cache
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\obj\Debug\AmarisMVC.LLB.csproj.CopyComplete
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\obj\Debug\AmarisMVC.LLB.dll
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLB\obj\Debug\AmarisMVC.LLB.pdb

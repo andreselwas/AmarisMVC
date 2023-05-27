@@ -1,0 +1,6 @@
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLM\bin\Debug\AmarisMVC.LLM.dll
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLM\bin\Debug\AmarisMVC.LLM.pdb
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLM\obj\Debug\AmarisMVC.LLM.csproj.AssemblyReference.cache
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLM\obj\Debug\AmarisMVC.LLM.csproj.CoreCompileInputs.cache
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLM\obj\Debug\AmarisMVC.LLM.dll
+C:\Users\W10-USER\source\repos\AmarisMVC\AmarisMVC.LLM\obj\Debug\AmarisMVC.LLM.pdb
