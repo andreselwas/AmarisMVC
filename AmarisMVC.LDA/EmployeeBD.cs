@@ -15,7 +15,7 @@ namespace AmarisMVC.LDA
         public void Dispose() { }
 
         //make the request GET of the list employees
-        public async Task<List<EmployeeM>> RequestListEmployees(string url)
+        public async Task<List<Data>> RequestListEmployees(string url)
         {
             var json = string.Empty;
 
@@ -28,25 +28,29 @@ namespace AmarisMVC.LDA
                     json = await Response.Content.ReadAsStringAsync();
                 }
 
-                return JsonConvert.DeserializeObject<List<EmployeeM>>(json);
+                var result = JsonConvert.DeserializeObject<ResultAll>(json);
+
+                return result.data;
             }
         }
 
         //make the request GET of the list employees by id 
-        public async Task<EmployeeM> RequestEmployeeID(string url, string Id)
+        public async Task<Data> RequestEmployeeID(string url, decimal Id)
         {
             var json = string.Empty;
 
             using (HttpClient httpClient = new HttpClient())
             {
-                var Response = await httpClient.GetAsync(url + Id);
+                var Response = await httpClient.GetAsync(url + Id.ToString());
 
                 if (Response.IsSuccessStatusCode)
                 {
                     json = await Response.Content.ReadAsStringAsync();
                 }
 
-                return JsonConvert.DeserializeObject<EmployeeM>(json);
+                var result = JsonConvert.DeserializeObject<ResultId>(json);
+
+                return result.data;
             }
         }
 

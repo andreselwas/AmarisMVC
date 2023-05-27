@@ -16,8 +16,8 @@ namespace AmarisMVC.Controllers
         {
             using (EmployeePrc employeePrc = new EmployeePrc())
             {
-                List<EmployeeM> listEmployees = new List<EmployeeM>();
-                EmployeeM Model = new EmployeeM();
+                List<Data> listEmployees = new List<Data>();
+                Data Model = new Data();
                 listEmployees = await employeePrc.ListAll(Model);
 
                 ViewBag.Employees = listEmployees;
@@ -26,22 +26,27 @@ namespace AmarisMVC.Controllers
         }
 
         [HttpGet]
-        public async Task<PartialViewResult> Search(EmployeeM employeeM)
+        public async Task<PartialViewResult> Search(Data employeeM)
         {
             using (EmployeePrc employeePrc = new EmployeePrc())
             {
-                List<EmployeeM> listEmployees = new List<EmployeeM>();
+                List<Data> listEmployees = new List<Data>();
+                Data listEmployee = new Data();
 
-                if (employeeM.Id == 0)
+                if (employeeM.id == 0)
                 {
                     listEmployees = await employeePrc.ListAll(employeeM);
+
+                    ViewBag.Employees = listEmployees;
                 }
                 else
                 {
-                    listEmployees = await employeePrc.ListById(employeeM, employeeM.Id);
+                    listEmployee = await employeePrc.ListById(employeeM, employeeM.id);
+
+                    ViewBag.Employees = listEmployee;
                 }
 
-                ViewBag.Employees = listEmployees;
+                
             }
 
             return PartialView("_Search");

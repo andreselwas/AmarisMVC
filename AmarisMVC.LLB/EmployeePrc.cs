@@ -13,10 +13,10 @@ namespace AmarisMVC.LLB
         public EmployeePrc() { }
 
         public void Dispose() { }
-        public async Task<List<EmployeeM>> ListAll(EmployeeM Model)
+        public async Task<List<Data>> ListAll(Data Model)
         {
             string searchall = string.Empty;
-            List<EmployeeM> model = null;
+            List<Data> model = null;
 
             searchall = EmployeeBD.ReadAppSetting("APIUrlAll");
 
@@ -28,22 +28,22 @@ namespace AmarisMVC.LLB
             return model;
         }
 
-        public async Task<List<EmployeeM>> ListById(EmployeeM Model, decimal Id)
+        public async Task<Data> ListById(Data Model, decimal Id)
         {
             string searchId = string.Empty;
-            List<EmployeeM> model = null;
+            Data model = null;
 
             searchId = EmployeeBD.ReadAppSetting("APIUrlId");
 
             using (EmployeeBD employeeBD = new EmployeeBD())
             {
-                model = await employeeBD.RequestListEmployees(searchId);
+                model = await employeeBD.RequestEmployeeID(searchId, Id);
             }
 
             return model;
         }
 
-        public decimal CalculateEmployeeAnualSalary(decimal employeeSalary)
+        public static decimal CalculateEmployeeAnualSalary(decimal employeeSalary)
         {
             decimal AnualSalary = employeeSalary * 12;
 

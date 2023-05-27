@@ -1,12 +1,12 @@
-﻿@model AmarisMVC.LLM.EmployeeM
+﻿@model AmarisMVC.LLM.Data
 
 @{
     ViewBag.Title = "Home Page";
-    List<AmarisMVC.LLM.EmployeeM> ListEmployees = null;
+    List<AmarisMVC.LLM.Data> ListEmployees = null;
 
     if (ViewBag.Employees != null)
     {
-        ListEmployees = ViewBag.Employees as List<AmarisMVC.LLM.EmployeeM>;
+        ListEmployees = ViewBag.Employees as List<AmarisMVC.LLM.Data>;
     }
 }
 
@@ -32,6 +32,7 @@
             <table id="employeeTable" class="table-striped table-bordered table-sm font-size-sm hg-filtro-estandar font-size-sm">
                 <thead>
                     <tr>
+                        <th></th>
                         <th><a href="#">Id</a></th>
                         <th><a href="#">Name</a></th>
                         <th><a href="#">Salary</a></th>
@@ -41,21 +42,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @*@if (ListEmployees != null && ListEmployees.Count() > 0)
+                    @if (ListEmployees != null && ListEmployees.Count() > 0)
                         {
                             foreach (var item in ListEmployees)
                             {
                                 <tr>
-                                    <td>@Html.ActionLink("Consultar", "Editar", new { Id = item.Id })</td>
-                                    <td>@item.Id</td>
+                                    <td>@Html.ActionLink("Consultar", "Editar", new { id = item.id })</td>
+                                    <td>@item.id</td>
                                     <td>@item.employee_name</td>
                                     <td>@item.employee_salary</td>
                                     <td>@item.employee_age</td>
                                     <td>@item.profile_image</td>
-                                    <td>@item.Employee_anual_salary</td>
+                                    <td>@AmarisMVC.LLB.EmployeePrc.CalculateEmployeeAnualSalary(Convert.ToDecimal(item.employee_salary))</td>
                                 </tr>
                             }
-                        }*@
+                        }
                 </tbody>
             </table>
         </div>
@@ -81,25 +82,5 @@
                 }
             });
         });
-
-        function populateTable(data) {
-            var tableBody = $('#employeeTable tbody');
-            tableBody.empty();
-
-            $.each(data, function (index, employee) {
-                var annualSalary = AmarisMVC.LLB.EmployeePrc.CalculateEmployeeAnualSalary(employee.Salary);
-
-                var row = '<tr>' +
-                    '<td>' + employee.Id + '</td>' +
-                    '<td>' + employee.EmployeeName + '</td>' +
-                    '<td>' + employee.EmployeeSalary + '</td>' +
-                    '<td>' + employee.EmployeeAge + '</td>' +
-                    '<td>' + employee.ProfileImage + '</td>' +
-                    '<td>' + annualSalary + '</td>' +
-                    '</tr>';
-
-                tableBody.append(row);
-            });
-        }
     });
 </script>
